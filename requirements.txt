@@ -31,7 +31,6 @@ PyGetWindow==0.0.8
 pylint==2.5.3
 PyMsgBox==1.0.8
 pyobjc==6.2.2
-pyobjc-core==6.2.2
 pyobjc-framework-Accounts==6.2.2
 pyobjc-framework-AddressBook==6.2.2
 pyobjc-framework-AdSupport==6.2.2
