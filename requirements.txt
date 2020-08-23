@@ -36,5 +36,4 @@ six==1.12.0
 typing==3.7.4.3
 virtualenv==20.0.31
 Werkzeug==1.0.1
-xattr==0.6.4
 zipp==1.2.0
