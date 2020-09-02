@@ -45,14 +45,14 @@ def generating_answer(question_from_dailogflow_dict):
 
     #เก็บต่า ชื่อของ intent ที่รับมาจาก Dailogflow
     intent_group_question_str = question_from_dailogflow_dict["queryResult"]["intent"]["displayName"] 
-    print('intent {}'.format(intent_group_question_str))
+    #print('intent {}'.format(intent_group_question_str))
 
     #ลูปตัวเลือกของฟังก์ชั่นสำหรับตอบคำถามกลับ
     if intent_group_question_str == 'บุคลากร - custom - yes':
-        print('question {}'.format(question_from_dailogflow_dict))
+        #print('question {}'.format(question_from_dailogflow_dict))
         answer_str = personTeam(question_from_dailogflow_dict)
     elif intent_group_question_str == 'สรุปรายงาน SiData+ - custom - yes':
-        print('question {}'.format(question_from_dailogflow_dict))
+        #print('question {}'.format(question_from_dailogflow_dict))
         answer_str = googlesheet(question_from_dailogflow_dict)
     else: answer_str = "ผมไม่เข้าใจ คุณต้องการอะไร"
 
@@ -66,7 +66,7 @@ def generating_answer(question_from_dailogflow_dict):
 
 def personTeam(respond_dict):
     nam = str(respond_dict["queryResult"]["outputContexts"][1]["parameters"]["Name.original"])
-    print('debug {}'.format(nam))
+    #print('debug {}'.format(nam))
     if nam == 'เอก':
         answer_function = 'https://si.mahidol.ac.th/siit/admin/personal_images/10011350.jpg'
     elif nam == 'เจมส์':
@@ -85,9 +85,9 @@ def personTeam(respond_dict):
     return answer_function
 
 def googlesheet(respond_dict):
-    print('googlesheet {}'.format(respond_dict))
+    #print('googlesheet {}'.format(respond_dict))
     name1 = str(respond_dict["queryResult"]["outputContexts"][1]["parameters"]["Parameter1.original"])
-    print('name1 = {}'.format(name1))
+    #print('name1 = {}'.format(name1))
     dataframe = pd.DataFrame(worksheet.get_all_records())
     answer = ''
     #print('debug {}'.format(name1))
