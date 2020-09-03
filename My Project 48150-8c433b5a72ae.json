@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "spartan-amphora-274911",
+  "private_key_id": "8c433b5a72ae2207db054657309e7075928d8d14",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQCkr+hT2ZDTa4+Y\nQraQ06RBNzg7WrPOGV0cUJtZBg9jgeTy/ktcw9PEEoqQfFdg1otiNF/1cYDtOAaG\nQLpWcxwhyakkffNAhJSqruWlVoCQCMp/S6D4nt9e/HxS1ijoSywhdAcoLbVoph9S\noHkcpkvJbkYaG79aFewUCNi4SNRbZkJeNRUELYeohQPzyPfj84jY+HWWU+mM2v9u\nmdrlE7DngzdmXFMSR1yj8JEKje2pxOFFJ1NXzOAAyHxTfVEhtbd+/61kCARNX9S9\nb/CTEsKNJqzPfILpuiTEfD9lYCyCbYEBhjY2XJ8N6XmBJ3q7u1JArPrK6k2ZxuZe\nqUsR1mbLAgMBAAECggEAQ3vNoOZrQSc3PTZBJ1GCYjLlePTu7wpXrC2fqrggAC+P\nCL+JVCbulM7gNtqs14KytPgvRh1PrmUhz0ugz6H1qia/h7OQxSRO4y4t7jVnEx53\nE/iCqr43W+3sZ+lX8/Ax0jeAY0dvqcVA2pPlbQb70Tu9wB8Upy6KgZ8qZ0F4u0af\neR8I7DGXnfPINVIFWGW9KWLRAJpiF6v+Y3dYTULw/m6f3B7BuX+JAincjoxVKtgC\nF7flk+qB/Q7b5CNsKe1lZmgLrDkHSp6XnN0Kr1/7UmrIfx4V1u/y8S1zZ2WpcKBB\n0Oymcao4COpyPkFvkRvwOHKeK8ZEEoYsUbqhqNtJoQKBgQDndbkjseCVaCci35hB\nGt1tRIp6bUof9UXT5A2FtU+4HmBwZj5R1oOAZj7PgpTunSSQ0ops2ys9+WImKojP\n5pbTrs97xyqbG6WVUJO+tkUYNEK01cai8gUjon6E/SItJqpvGlYu/MutxHXBTxkr\n7TgEtTHflwG5dOIJJcnCK80M+wKBgQC2JddU/jLKWhxUvONK9RkRKz8MS8pqygTu\nO3BlCw2IdWeLFJtI412471FkkIi2r2KtNAfuLnZuhyrrfUc1GYM8vGToozdsTiVC\nZSRXpWSjJXEQBv5S2H1TQW0XxYwg/Kq6ko/FWeApc8Dij8Pg3uUOrsW7T1IAg3mQ\n21k8FtNEcQKBgFVmrWILPrdBz7bhUzcqZ2rqsEGN05zJDfOpoIemJ3zi0GiIgRQH\nF0wn7aL5JmSIXLaGyIZzs5fRTTKR3RsAlMQUKwAbs4+5erYGHg1vCT1uAvLgMcNr\nkxPb39zH3XVVX+tQh14c7jX2WBB0U/BOPa4XAQjjmcJI6yG+7JuVN7pDAoGAKhy1\nnEDpHT+YLT8+jaX9FasZ+I3NTsNGQI4dfj7/8fyy48Tv4fovQQKTntyLvzDtb34I\nF1lGqGc31RoxzGUJopEsA105AyFOG/umW10x10ZgzYPQaPcEgqstvcE+lKHWFyyr\ncMVGvk602azDbMobyzk9HgFIxDWhdYxBJVNhpQECgYEAjHcifqt2o0bTKgCT9avB\nE3cQuu0Mbrc1XVonxouEg9O85w/BLgK7AVKWE1Bp2pXxE34BlDmfP7jfZGkFpcJK\n7zGd1qxllw5WiOEkgPKydKueSzNbbTeRF5es/us7S0ObmHR8Cfw2nogFiqXsfTpM\nHXLX6D1ZLqjtVyashAj1Gt8=\n-----END PRIVATE KEY-----\n",
+  "client_email": "pysheet@spartan-amphora-274911.iam.gserviceaccount.com",
+  "client_id": "113874353889072279850",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/pysheet%40spartan-amphora-274911.iam.gserviceaccount.com"
+}
