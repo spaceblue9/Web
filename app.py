@@ -91,26 +91,23 @@ def googlesheet(respond_dict):
     #print('name1 = {}'.format(name1))
     dataframe = pd.DataFrame(worksheet.get_all_records())
     answer = ''
-    return 'Data Missing {}'.format(name1)
     #print('debug {}'.format(name1))
-    '''
     if name1 == 'วันนี้':
         date_timestamp = (datetime.now()).strftime("%d-%m-%Y")
         df1 = dataframe
         df1 = (df1[df1.Timestamp.str.contains(date_timestamp,case=False)])
-        for row in df1.iterrows():
+        for index,row in df1.iterrows():
             answer1 = "{} เรื่อง : {} \nเบอร์โทรติดต่อ : {} \nเอกสารแนบ : {} \n".format(row['กรุณากรอก ชื่อ/นามสกุล'], row['ข้อคำถาม'], row['เบอร์โทรติดต่อ'], row['แนบเอกสารเพิ่มเติม'])
             answer = answer + answer1 + '\n'
         answer_function = answer
     elif name1 == 'ทั้งหมด':
         df = dataframe
-        for row in df.iterrows():
+        for index,row in df.iterrows():
             answer1 = "{} เรื่อง : {} \nเบอร์โทรติดต่อ : {} \nเอกสารแนบ : {} \n".format(row['กรุณากรอก ชื่อ/นามสกุล'], row['ข้อคำถาม'], row['เบอร์โทรติดต่อ'], row['แนบเอกสารเพิ่มเติม'])
             answer = answer + answer1 + '\n'
         answer_function = answer
     else: answer_function = "ผมไม่สามารถหาข้อมูลให้ได้ครับ ขอโทษด้วยครับ"
     return answer_function
-    '''
 
 #Flask
 if __name__ == '__main__':
