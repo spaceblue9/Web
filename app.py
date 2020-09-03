@@ -91,7 +91,9 @@ def googlesheet(respond_dict):
     #print('name1 = {}'.format(name1))
     dataframe = pd.DataFrame(worksheet.get_all_records())
     answer = ''
+    return 'Data Missing {}'.format(name1)
     #print('debug {}'.format(name1))
+    '''
     if name1 == 'วันนี้':
         date_timestamp = (datetime.now()).strftime("%d-%m-%Y")
         df1 = dataframe
@@ -108,6 +110,7 @@ def googlesheet(respond_dict):
         answer_function = answer
     else: answer_function = "ผมไม่สามารถหาข้อมูลให้ได้ครับ ขอโทษด้วยครับ"
     return answer_function
+    '''
 
 #Flask
 if __name__ == '__main__':
