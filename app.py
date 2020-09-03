@@ -9,7 +9,7 @@ from datetime import datetime
 import pandas as pd
 import gspread
 
-
+#อย่าลืม pip install gunicorn
 #Connect Google sheet--------------------------------------------------------
 scope = ["https://spreadsheets.google.com/feeds",'https://www.googleapis.com/auth/spreadsheets',"https://www.googleapis.com/auth/drive.file","https://www.googleapis.com/auth/drive"]
 
