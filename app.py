@@ -98,10 +98,7 @@ def googlesheet(respond_dict):
         df1 = (df1[df1.Timestamp.str.contains(date_timestamp,case=False)])
         for index,row in df1.iterrows():
             answer1 = "{} เรื่อง : {} \nเบอร์โทรติดต่อ : {} \nเอกสารแนบ : {} \n".format(row['กรุณากรอก ชื่อ/นามสกุล'], row['ข้อคำถาม'], row['เบอร์โทรติดต่อ'], row['แนบเอกสารเพิ่มเติม'])
-            if answer1 == "":
-                answer1 = 'ไม่มีข้อมูล'
             answer = answer + answer1 + '\n'
-            
         answer_function = answer
     elif name1 == 'ทั้งหมด':
         df = dataframe
