@@ -73,7 +73,7 @@ def personTeam(respond_dict):
         answer_function = 'https://si.mahidol.ac.th/siit/admin/personal_images/10034416.jpg'
     elif nam == 'ต้น':
         answer_function = 'https://si.mahidol.ac.th/siit/admin/personal_images/10024137.jpg'
-    elif nam == 'คิด' or name1 == 'สมคิด':
+    elif nam == 'คิด' or nam == 'สมคิด':
         answer_function = 'https://si.mahidol.ac.th/siit/admin/personal_images/10011317.jpg'
     elif nam == 'พี่อร':
         answer_function = 'https://si.mahidol.ac.th/siit/admin/personal_images/10003731.jpg'
@@ -95,13 +95,13 @@ def googlesheet(respond_dict):
         date_timestamp = (datetime.now()).strftime("%d-%m-%Y")
         df1 = dataframe
         df1 = (df1[df1.Timestamp.str.contains(date_timestamp,case=False)])
-        for index, row in df1.iterrows():
+        for row in df1.iterrows():
             answer1 = "{} เรื่อง : {} \nเบอร์โทรติดต่อ : {} \nเอกสารแนบ : {} \n".format(row['กรุณากรอก ชื่อ/นามสกุล'], row['ข้อคำถาม'], row['เบอร์โทรติดต่อ'], row['แนบเอกสารเพิ่มเติม'])
             answer = answer + answer1 + '\n'
         answer_function = answer
     elif name1 == 'ทั้งหมด':
         df = dataframe
-        for index, row in df.iterrows():
+        for row in df.iterrows():
             answer1 = "{} เรื่อง : {} \nเบอร์โทรติดต่อ : {} \nเอกสารแนบ : {} \n".format(row['กรุณากรอก ชื่อ/นามสกุล'], row['ข้อคำถาม'], row['เบอร์โทรติดต่อ'], row['แนบเอกสารเพิ่มเติม'])
             answer = answer + answer1 + '\n'
         answer_function = answer
