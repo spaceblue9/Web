@@ -18,6 +18,7 @@ client = gspread.authorize(creds)
 
 sheet = client.open("SiData+Response")
 worksheet = sheet.worksheet("sheet2")
+ws = sheet.worksheet("Report-Status-Process")
 #---------------------------------------------------------------------------
 
 
@@ -104,6 +105,13 @@ def googlesheet(respond_dict):
         df = dataframe
         for index,row in df.iterrows():
             answer1 = "{} \nเรื่อง : {} \nเบอร์โทรติดต่อ : {} \nเอกสารแนบ : {} \n".format(row['กรุณากรอก ชื่อ/นามสกุล'], row['ข้อคำถาม'], row['เบอร์โทรติดต่อ'], row['แนบเอกสารเพิ่มเติม'])
+            answer = answer + answer1 + '\n'
+        answer_function = answer
+    elif name1 == 'รายงาน':
+        dataframe = pd.DataFrame(ws.get_all_records())
+        df = dataframe
+        for index,row in df.iterrows():
+            answer1 = "เดือน {} จำนวน : {} เรื่อง\n".format(row['month(Timestamp)'], row['count Timestamp'])
             answer = answer + answer1 + '\n'
         answer_function = answer
     else: answer_function = "ผมไม่สามารถหาข้อมูลให้ได้ครับ ขอโทษด้วยครับ"
