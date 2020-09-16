@@ -43,7 +43,7 @@ def MainFunction():
 def generating_answer(question_from_dailogflow_dict):
 
     #Print intent ที่รับมาจาก Dailogflow
-    print(json.dumps(question_from_dailogflow_dict, indent=4 ,ensure_ascii=False))
+    #print(json.dumps(question_from_dailogflow_dict, indent=4 ,ensure_ascii=False))
 
     #เก็บต่า ชื่อของ intent ที่รับมาจาก Dailogflow
     intent_group_question_str = question_from_dailogflow_dict["queryResult"]["intent"]["displayName"] 
@@ -98,23 +98,20 @@ def googlesheet(respond_dict):
         df1 = dataframe
         df1 = (df1[df1.Timestamp.str.contains(date_timestamp,case=False)])
         for index,row in df1.iterrows():
-            answer1 = "{} \nเรื่อง : {} \nเบอร์โทรติดต่อ : {} \nเอกสารแนบ : {} \n".format(row['กรุณากรอก ชื่อ/นามสกุล'], row['ข้อคำถาม'], row['เบอร์โทรติดต่อ'], row['แนบเอกสารเพิ่มเติม'])
+            answer1 = "เรื่องที่: {} วันที่: {} \nชื่อผู้แจ้ง: {} \nเบอร์: {}\nรายละเอียด: {}\nเอกสารแนบ: {} \n".format(index+1,row['Timestamp'],row['กรุณากรอก ชื่อ/นามสกุล'],row['เบอร์โทรติดต่อ'],row['ข้อคำถาม'],row['แนบเอกสารเพิ่มเติม'])
             answer = answer + answer1 + '\n'
         answer_function = answer
     elif name1 == 'ทั้งหมด':
         df = dataframe
         for index,row in df.iterrows():
-            answer1 = "{} \nเรื่อง : {} \nเบอร์โทรติดต่อ : {} \nเอกสารแนบ : {} \n".format(row['กรุณากรอก ชื่อ/นามสกุล'], row['ข้อคำถาม'], row['เบอร์โทรติดต่อ'], row['แนบเอกสารเพิ่มเติม'])
+            answer1 = "เรื่องที่: {} วันที่: {} \nชื่อผู้แจ้ง: {} \nเบอร์: {}\nรายละเอียด: {}\nเอกสารแนบ: {} \n".format(index+1,row['Timestamp'],row['กรุณากรอก ชื่อ/นามสกุล'],row['เบอร์โทรติดต่อ'],row['ข้อคำถาม'],row['แนบเอกสารเพิ่มเติม'])
             answer = answer + answer1 + '\n'
         answer_function = answer
-    elif name1 == 'รายงาน':
-        dataframe = pd.DataFrame(ws.get_all_records())
-        df = dataframe
-        for index,row in df.iterrows():
-            answer1 = "เดือน {} จำนวน : {} เรื่อง\n".format(row['month(Timestamp)'], row['count Timestamp'])
-            answer = answer + answer1 + '\n'
-        answer_function = answer
+    elif name1 == 'สรุป':
+        answer_function = 'สรุปรายงานครับ : https://datastudio.google.com/s/vYib4KKo3jM'
     else: answer_function = "ผมไม่สามารถหาข้อมูลให้ได้ครับ ขอโทษด้วยครับ"
+    if answer_function == '':
+        answer_function = 'ไม่มีข้อความที่ฝากไว้คะ'
     return answer_function
 
 #Flask
