@@ -18,7 +18,6 @@ client = gspread.authorize(creds)
 
 sheet = client.open("SiData+Response")
 worksheet = sheet.worksheet("sheet2")
-ws = sheet.worksheet("Report-Status-Process")
 #---------------------------------------------------------------------------
 
 
